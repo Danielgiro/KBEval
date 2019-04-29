@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Children Evaluation Template</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="icon" 
+      type="image/png" 
+      href="favicon.png">
+      <style type="text/css">
+        @font-face{ font-family: Sense;src:"Sense_Reg"; }
+        h1.title{font-family: Sense; color: #888; font-size: 48px}
+      	h4.outbox{ margin-left: 1em; font-family: Sense;}
+      	h5.outbox{ margin-left: 1em; font-family: Sense;}
+      	div.section{
+      		margin-left: 5px;
+      		margin-top: 2px;
+      		margin-right: 5px;
+      		border:1px solid black;
+      		padding: 1em;
+      		overflow: auto;
+      	}
+      	input.send-button{
+			margin-top: 30px;
+			margin-bottom: 30px;
+			margin-left: 70px;
+			color: white;
+			border-radius: 1px;
+			background-color: #888;
+			border: 1px #888;
+			padding: 14px 40px;
+			font-family: Sense;
+      font-size: 24px;
+			cursor:pointer;
+			transition-duration: 0.2s;
+      	}
+      	button.send-button:hover{
+      		background-color: #555;
+      		box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.24),2px 2px 2px 2px rgba(0,0,0,0.19);      		
+      	}
+      </style>
+      <script src=validateForm.js>
+</script>
+</head>
+<body>
+<br>
+<form name="myForm" action="InfoChildren.php" method="post" id="evalform" onsubmit="return validateForm()">
+<h4 class="outbox"><p>ALUMNE/A:<input type="text" name="Student" id="alum-id" size="30" style="margin-left: 1em"></p>
+<p>PROFESSOR:<input type="text" name="Teacher" id="prof-id" size="30" style="margin-left: 0.7em"></p>
+<p>IDIOMA:<input type="text" name="Language" size="30" id="lang-id" style="margin-left: 2.5em"></p></h4>
+<img style="position:absolute;top:0px;left:75%;width:306px;border: 5px #888" src="Logo Kingsbrook gris.jpg" class="image-logo" alt="Kingsbrook Logo"/>
+<br>
+<center><h1 class="title"><b>EVALUATION  TEMPLATE</b></h1></center>
+<hr style="border-color: #888; border-width: 1px; margin: 15px">
+<br>
+<h5 class="outbox">
+<p>- Llibre utilitzat / <i>Book used:</i><input type="text" name="book" id="book-id" size="66" style="margin-left: 0.5em"></p>
+<p>- Gramàtica / <i>Grammar: </i><input type="text" name="grammar" id="grammar-id" size="69" style="margin-left: 0.5em"></p>
+</h5>
+<br>
+<div class="section">
+  <h3><p><b><font color="#888" face="verdana">ACTITUD/<i>ATTITUDE</i></font></b></p></h3>
+  <h5>
+  <select class="w3-select" name="Attitude" id="act-id">
+    <option value="" disabled selected>Choose your option</option>
+    <option value="L’alumne/a es mostra segur/a a classe / <i>The student is confident in class.</i>">L’alumne/a es mostra segur/a a classe / <i>The student is confident in class.</i></option>
+    <option value="L’alumne/a s’ofereix voluntari/a per ajudar els companys quan es troben amb dificultats / <i>The student offers to help the other students when they find particular areas difficult.</i>">L’alumne/a s’ofereix voluntari/a per ajudar els companys quan es troben amb dificultats / <i>The student offers to help the other students when they find particular areas difficult.</i></option>
+    <option value="És un/a alumne/a excel·lent i molt atent/a, que ràpidament entén nous conceptes de gramàtica i vocabulari / <i>The student is very bright and attentive, and quickly grasps new grammar concepts and vocabulary.</i>">És un/a alumne/a excel·lent i molt atent/a, que ràpidament entén nous conceptes de gramàtica i vocabulari / <i>The student is very bright and attentive, and quickly grasps new grammar concepts and vocabulary.</i></option>
+    <option value="L’alumne/a escolta atentament a classe, gaudeix donant la seva opinió i donant explicacions / <i>The student listens attentively in class, enjoys expressing her opinion/giving explanations </i>">L’alumne/a escolta atentament a classe, gaudeix donant la seva opinió i donant explicacions / <i>The student listens attentively in class, enjoys expressing her opinion/giving explanations </i></option>
+    <option value="L’alumne/a segueix el ritme de la classe / <i>The student keeps up with the pace of the class.</i>">L’alumne/a segueix el ritme de la classe / <i>The student keeps up with the pace of the class.</i></option>
+    <option value="La seva actitud és millorable / <i>His/her attitude can be improved.</i>">La seva actitud és millorable / <i>His/her attitude can be improved.</i></option>
+</select>
+</h5>
+<br>
+<h4><p>COMENTARIS/<i>COMMENTS</i></p></h4>
+  <p><textarea id="com-act" cols="142" rows="4" name="act-com"></textarea></p>
+</div>
+<br>
+<div class="section">
+  <h3><p><b><font color="#888" face="verdana">PARTICIPACIÓ I MOTIVACIÓ/<i>PARTICIPATION AND MOTIVATION</i></font></b></p></h3>
+  <h5>
+  <select class="w3-select" name="Participation" id="parti-id">
+    <option value="" disabled selected>Choose your option</option>
+    <option value="L’alumne/a sempre contribueix amb informació rellevant / <i>The student has been a valuable contribution to our classes.</i>">L’alumne/a sempre contribueix amb informació rellevant / <i>The student has been a valuable contribution to our classes.</i></option>
+    <option value="L’alumne/a es mostra molt motivat/a i molt participatiu / <i>The student is highly motivated and loves participating in class.</i>">L’alumne/a es mostra molt motivat/a i molt participatiu / <i>The student is highly motivated and loves participating in class.</i></option>
+    <option value="L’alumne/a gaudeix aprenent a través de cançons i jocs / <i>The student enjoys learning through singing and playing games.</i>">L’alumne/a gaudeix aprenent a través de cançons i jocs / <i>The student enjoys learning through singing and playing games.</i></option>
+    <option value="La seva motivació fa que avanci ràpidament a l’hora d’adquirir nous coneixements / <i>The student’s motivation allows him/her to advance quickly when it comes to the acquisition of new content.</i>">La seva motivació fa que avanci ràpidament a l’hora d’adquirir nous coneixements / <i>The student’s motivation allows him/her to advance quickly when it comes to the acquisition of new content.</i></option>
+    <option value="L’alumne/a necessita una mica d’ajuda per implicar-se en les activitats / <i>The student needs to be pushed a little bit more to get there.</i>">L’alumne/a necessita una mica d’ajuda per implicar-se en les activitats / <i>The student needs to be pushed a little bit more to get there.</i></option>
+    <option value="L’alumne/a té bona memòria pel vocabulari nou / <i>The student has a good memory for new vocabulary.</i>">L’alumne/a té bona memòria pel vocabulari nou / <i>The student has a good memory for new vocabulary.</i></option>
+    <option value="L’alumne/a prefereix les activitats en grup  a treballar individualment / <i>The student prefers to participate in group activities, instead of individual ones.</i>">L’alumne/a prefereix les activitats en grup  a treballar individualment / <i>The student prefers to participate in group activities, instead of individual ones.</i></option>
+    <option value="L’alumne/a només participa si el professor/a li ho demana / <i>The student only participates if requested by the teacher.</i>">L’alumne/a només participa si el professor/a li ho demana / <i>The student only participates if requested by the teacher.</i></option>
+</select>
+</h5>
+<br>
+<h4><p>COMENTARIS/<i>COMMENTS</i></p></h4>
+  <p><textarea id="com-parti" cols="142" rows="4" name="parti-com"></textarea></p>
+</div>
+<br>
+<div class="section">
+  <h3><p><b><font color="#888" face="verdana">EXPRESSIÓ ORAL/<i>SPEAKING</i></font></b></p></h3>
+  <h5>
+  <select class="w3-select" name="Speaking" id="speak-id">
+    <option value="" disabled selected>Choose your option</option>
+    <option value="L’alumne/a és capaç d’utilitzar correctament els temps verbals en el context apropiat / <i>Is able to properly use different verbal tenses in an appropriate context.</i>">L’alumne/a és capaç d’utilitzar correctament els temps verbals en el context apropiat / <i>Is able to properly use different verbal tenses in an appropriate context.</i></option>
+    <option value="L’alumne/a és capaç d’expressar situacions personals i donar informació complexa amb un ampli vocabulari / <i>Is well able to express personal information and give complex information with a wide range of vocabulary.</i>">L’alumne/a és capaç d’expressar situacions personals i donar informació complexa amb un ampli vocabulari / <i>Is well able to express personal information and give complex information with a wide range of vocabulary.</i></option>
+    <option value="L’alumne/a mostra fluïdesa en la interacció oral amb els companys i el professor / <i>Is fluent during oral interaction with classmates and teacher.</i>">L’alumne/a mostra fluïdesa en la interacció oral amb els companys i el professor / <i>Is fluent during oral interaction with classmates and teacher.</i></option>
+    <option value="La seva pronunciació ha millorat al llarg de les sessions / <i>His/Her pronunciation has improved throughout the course.</i>">La seva pronunciació ha millorat al llarg de les sessions / <i>His/Her pronunciation has improved throughout the course.</i></option>
+    <option value="Pot expressar-se amb diferents expressions i utilitzar una gran riquesa lèxica / <i>He/She can speak using different expressions and using a rich vocabulary.</i>">Pot expressar-se amb diferents expressions i utilitzar una gran riquesa lèxica / <i>He/She can speak using different expressions and using a rich vocabulary.</i></option>
+    <option value="L’alumne/a entén gairebé tota la conversa i rarament no troba les paraules per expressar-se / <i>The student understands almost everything in a conversation and rarely can’t find the right words or sentence structure when talking.</i>">L’alumne/a entén gairebé tota la conversa i rarament no troba les paraules per expressar-se / <i>The student understands almost everything in a conversation and rarely can’t find the right words or sentence structure when talking.</i></option>
+    <option value="De vegades, necessita el suport del professor a l’hora d’expressar-se verbalment / <i>Needs the teacher’s support when speaking.</i>">De vegades, necessita el suport del professor a l’hora d’expressar-se verbalment / <i>Needs the teacher’s support when speaking.</i></option>
+    <option value="Seguirem treballant i reforçant les estructures utilitzades en l’expressió oral espontània / <i>We’ll keep on working and reinforcing structures used in spontaneous conversations.</i>">Seguirem treballant i reforçant les estructures utilitzades en l’expressió oral espontània / <i>We’ll keep on working and reinforcing structures used in spontaneous conversations.</i></option>
+    <option value="L’alumne/a respon correctament quan se li pregunta / <i>He/She answers properly when asked.</i>">L’alumne/a respon correctament quan se li pregunta / <i>He/She answers properly when asked.</i></option>
+    <option value="L’alumne/a pot iniciar una interacció oral sempre i quan tingui una pauta / <i>Can start a conversation as long as he has language support.</i>">L’alumne/a pot iniciar una interacció oral sempre i quan tingui una pauta / <i>Can start a conversation as long as he has language support.</i></option>
+    <option value="L’alumne/a necessita millorar la seva pronunciació / <i>He/she needs to improve his/her pronunciation.</i>">L’alumne/a necessita millorar la seva pronunciació / <i>He/she needs to improve his/her pronunciation.</i></option>
+    <option value="L’alumne/a necessita millorar la seva fluïdesa verbal / <i>He/she needs to improve his/her speaking.</i>">L’alumne/a necessita millorar la seva fluïdesa verbal / <i>He/she needs to improve his/her speaking.</i></option>
+</select>
+</h5>
+<br>
+<h4><p>COMENTARIS/<i>COMMENTS</i></p></h4>
+  <p><textarea id="com-speak" cols="142" rows="4" name="speak-com"></textarea></p>
+</div>
+<br>
+<div class="section">
+  <h3><p><b><font color="#888" face="verdana">COMPRENSIÓ ORAL/<i>LISTENING</i></font></b></p></h3>
+  <h5>
+  <select class="w3-select" name="Listening" id="listen-id">
+    <option value="" disabled selected>Choose your option</option>
+    <option value="L’alumne/a és capaç de comprendre instruccions a classe, audicions i activitats audiovisuals / <i>Is able to understand instructions in class, as well as audios and audiovisual activities.</i>">L’alumne/a és capaç de comprendre instruccions a classe, audicions i activitats audiovisuals / <i>Is able to understand instructions in class, as well as audios and audiovisual activities.</i></option>
+    <option value="És capaç d’entendre situacions personals i rebre informació complexa amb un ampli vocabulari / <i>Is well able to express personal information and give complex information with a wide range of vocabulary.</i>">És capaç d’entendre situacions personals i rebre informació complexa amb un ampli vocabulari / <i>Is well able to express personal information and give complex information with a wide range of vocabulary.</i></option>
+    <option value="Mostra facilitat per comprendre instruccions del professor i les intervencions dels companys / <i>Understands teacher’s instructions easily, as well as his/her classmates’ contributions.</i><">Mostra facilitat per comprendre instruccions del professor i les intervencions dels companys / <i>Understands teacher’s instructions easily, as well as his/her classmates’ contributions.</i></option>
+    <option value="La seva comprensió oral ha millorat al llarg del curs / <i>His/Her oral comprehension has improved throughout the course.</i>">La seva comprensió oral ha millorat al llarg del curs / <i>His/Her oral comprehension has improved throughout the course.</i></option>
+    <option value="Pot entendre diferents expressions i paraules de riquesa lèxica / <i>Can understand different expressions and advanced words.</i>">Pot entendre diferents expressions i paraules de riquesa lèxica / <i>Can understand different expressions and advanced words.</i></option>
+    <option value="L’alumne/a mostra habilitat amb la comprensió oral i sembla haver adquirit bé tota la gramàtica realitzada / <i>The student has good listening skills and seems to have grasped the grammar covered very well</i>">L’alumne/a mostra habilitat amb la comprensió oral i sembla haver adquirit bé tota la gramàtica realitzada / <i>The student has good listening skills and seems to have grasped the grammar covered very well</i></option>
+    <option value="L’alumne/a necessita l’ajuda del professor/a a l’hora d’entendre les audicions i les instruccions verbals / <i>He/She needs the teacher’s help to understand audios and verbal instructions.</i>">L’alumne/a necessita l’ajuda del professor/a a l’hora d’entendre les audicions i les instruccions verbals / <i>He/She needs the teacher’s help to understand audios and verbal instructions.</i></option>
+    <option value="Seguirem treballant i reforçant les estructures més complexes pel que fa a la comprensió oral / <i>We’ll keep on working and reinforcing the oral comprehension of complex structures.</i>">Seguirem treballant i reforçant les estructures més complexes pel que fa a la comprensió oral / <i>We’ll keep on working and reinforcing the oral comprehension of complex structures.</i></option>
+    <option value="És capaç d’entendre diàlegs curts / <i>Is able to understand short dialogues.</i>">És capaç d’entendre diàlegs curts / <i>Is able to understand short dialogues.</i></option>
+    <option value="Pot entendre un missatge oral sempre i quan tingui la transcripció / <i>Can understand an oral message as long as he has the transcript.</i>">Pot entendre un missatge oral sempre i quan tingui la transcripció / <i>Can understand an oral message as long as he has the transcript.</i></option>
+    <option value="Cal millorar la comprensió oral / <i>He/She needs to improve her listening.</i>">Cal millorar la comprensió oral / <i>He/She needs to improve her listening.</i></option>
+</select>
+</h5>
+<br>
+<h4><p>COMENTARIS/<i>COMMENTS</i></p></h4>
+  <p><textarea id="com-listen" cols="142" rows="4" name="listen-com"></textarea></p>
+</div>
+<br>
+<div class="section">
+  <h3><p><b><font color="#888" face="verdana">EXPRESSIÓ ESCRITA/<i>WRITING</i></font></b></p></h3>
+  <h5>
+  <select class="w3-select" name="Writing" id="write-id">
+    <option value="" disabled selected>Choose your option</option>
+    <option value="L’alumne/a és capaç d’utilitzar correctament els temps verbals en el context apropiat / <i>s able to properly use different verbal tenses in their appropriate context.</i>">L’alumne/a és capaç d’utilitzar correctament els temps verbals en el context apropiat / <i>s able to properly use different verbal tenses in their appropriate context.</i></option>
+    <option value="És capaç d’expressar per escrit situacions personals i donar informació complexa amb un ampli vocabulari / <i>Is well able to express written personal information and give complex information with a wide range of vocabulary.">És capaç d’expressar per escrit situacions personals i donar informació complexa amb un ampli vocabulari / <i>Is well able to express written personal information and give complex information with a wide range of vocabulary.</i></option>
+    <option value="L’alumne/a mostra habilitat quan escriu textos de diferents formats i tipologies / <i>Is well skilled when writing different texts in various formats.</i>">L’alumne/a mostra habilitat quan escriu textos de diferents formats i tipologies / <i>Is well skilled when writing different texts in various formats.</i></option>
+    <option value="Pot expressar-se per escrit amb diferents expressions i utilitzar una gran riquesa lèxica / <i>He/She can write using different expressions and a rich vocabulary.</i>">Pot expressar-se per escrit amb diferents expressions i utilitzar una gran riquesa lèxica / <i>He/She can write using different expressions and a rich vocabulary.</i></option>
+    <option value="Necessita el suport del professor en alguns moments a l’hora d’escriure / <i>Needs the teacher’s support when writing.</i>">Necessita el suport del professor en alguns moments a l’hora d’escriure / <i>Needs the teacher’s support when writing.</i></option>
+    <option value="Seguirem treballant i reforçant les estructures per l’expressió escrita / <i>We’ll keep on working and reinforcing writing structures.</i>">Seguirem treballant i reforçant les estructures per l’expressió escrita / <i>We’ll keep on working and reinforcing writing structures.</i></option>
+    <option value="S’expressa utilitzant estructures bàsiques / <i>He/She uses basic structures in his/her writings.</i>">S’expressa utilitzant estructures bàsiques / <i>He/She uses basic structures in his/her writings.</i></option>
+    <option value="Cal millorar l’expressió escrita / <i>He/she needs to improve his/her writing.</i>">Cal millorar l’expressió escrita / <i>He/she needs to improve his/her writing.</i></option>
+</select>
+</h5>
+<br>
+<h4><p>COMENTARIS/<i>COMMENTS</i></p></h4>
+  <p><textarea id="com-write" cols="142" rows="4" name="write-com"></textarea></p>
+</div>
+<br>
+<div class="section">
+  <h3><p><b><font color="#888" face="verdana">COMPRENSIÓ ESCRITA/<i>READING</i></font></b></p></h3>
+  <h5>
+  <select class="w3-select" name="Reading" id="read-id">
+    <option value="" disabled selected>Choose your option</option>
+    <option value="L’alumne/a es mostra entusiasmat per aprendre anglès, li agrada especialment llegir / <i>The student is enthusiastic about learning English, and especially loves reading.</i>">L’alumne/a es mostra entusiasmat per aprendre anglès, li agrada especialment llegir / <i>The student is enthusiastic about learning English, and especially loves reading.</i></option>
+    <option value="És capaç de comprendre textos que utilitzen diferents temps verbals / <i>Is able to understand texts properly with different verbal tenses.</i>">És capaç de comprendre textos que utilitzen diferents temps verbals / <i>Is able to understand texts properly with different verbal tenses.</i></option>
+    <option value="Rarament necessita ajuda per comprendre un text. Mostra seguretat al parafrasejar estructures practicades a classe / <i>He/She rarely needs help to understand a text. He/She shows self-confidence when recycling structures worked on in class.</i>">Rarament necessita ajuda per comprendre un text. Mostra seguretat al parafrasejar estructures practicades a classe / <i>He/She rarely needs help to understand a text. He/She shows self-confidence when recycling structures worked on in class.</i></option>
+    <option value="Mostra habilitat a l’hora d’entendre textos de diferents formats, tipologies i temàtiques / <i>Is well skilled when reading and understanding different texts about various genres and topics.</i>">Mostra habilitat a l’hora d’entendre textos de diferents formats, tipologies i temàtiques / <i>Is well skilled when reading and understanding different texts about various genres and topics.</i></option>
+    <option value="Pot entendre textos en registre formal i informal / <i>He/She can understand texts with both a formal and informal register.</i>">Pot entendre textos en registre formal i informal / <i>He/She can understand texts with both a formal and informal register.</i></option>
+    <option value="De vegades, necessita el suport del professor a l’hora de llegir / <i>Needs the teacher’s support when reading.</i>">De vegades, necessita el suport del professor a l’hora de llegir / <i>Needs the teacher’s support when reading.</i></option>
+    <option value="Seguirem treballant i reforçant estratègies per la comprensió escrita / <i>We’ll keep on working and reinforcing reading strategies.</i>">Seguirem treballant i reforçant estratègies per la comprensió escrita / <i>We’ll keep on working and reinforcing reading strategies.</i></option>
+    <option value="Comprèn estructures bàsiques i instruccions per escrit / <i>He/She understands basic structures and instructions.</i>">Comprèn estructures bàsiques i instruccions per escrit / <i>He/She understands basic structures and instructions.</i></option>
+    <option value="Cal millorar la seva comprensió escrita / <i>He/she needs to improve his/her reading.</i>">Cal millorar la seva comprensió escrita / <i>He/she needs to improve his/her reading.</i></option>
+</select>
+</h5>
+<br>
+<h4><p>COMENTARIS/<i>COMMENTS</i></p></h4>
+  <p><textarea id="com-read" cols="142" rows="4" name="read-com"></textarea></p>
+</div>
+<p><input class="send-button" type="submit" value="S E N D"></p>
+</form>
+
+</body>
+</html>
